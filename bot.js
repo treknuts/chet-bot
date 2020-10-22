@@ -2,7 +2,7 @@ var logger = require("winston");
 
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const { prefix, token } = require("./auth.json");
+const prefix = "/";
 
 const tools = [
   "knives",
