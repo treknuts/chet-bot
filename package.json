@@ -1,0 +1,11 @@
+{
+  "name": "chet-bot",
+  "version": "1.0.0",
+  "description": "PricklyBois chat bot",
+  "main": "bot.js",
+  "author": "Trevor Knutson",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston": "^3.3.3"
+  }
+}
