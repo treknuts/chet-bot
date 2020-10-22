@@ -1,6 +1,7 @@
-var Discord = require("discord.io");
 var logger = require("winston");
 
+const Discord = require("discord.js");
+const bot = new Discord.Client();
 const { prefix, token } = require("./auth.json");
 
 const tools = [
@@ -36,31 +37,18 @@ logger.add(new logger.transports.Console(), {
 });
 logger.level = "debug";
 
-var bot = new Discord.Client({
-  token: token,
-  autorun: true,
-});
-bot.on("ready", function (evt) {
+bot.once("ready", () => {
   logger.info("Connected");
   logger.info("Logged in as: ");
   logger.info(bot.username + " - (" + bot.id + ")");
 });
-bot.on("message", function (user, userID, channelID, message, evt) {
-  if (message.substring(0, 1) == `${prefix}`) {
-    var args = message.substring(1).split(" ");
-    var cmd = args[0];
-
-    if (tools.includes(cmd)) {
-      bot.sendMessage({
-        to: channelID,
-        message: "Check.",
-      });
-    } // else if (cmd == "commands") {
-    //     bot.sendMessage({
-    //         to: channelID,
-    //         message: ""
-    //     })
-    // }
-    // Just add any case commands if you want to..
-  }
+bot.on("message", (message) => {
+  tools.forEach((tool) => {
+    if (message.content === `${prefix}${tool}`) {
+      message.channel.send("Check.");
+    }
+  });
 });
+
+bot.login(token);
+// bot.login(process.env.BOT_TOKEN);
