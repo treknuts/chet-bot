@@ -51,6 +51,8 @@ bot.on("message", (message) => {
   tools.forEach((tool) => {
     if (message.content === `${prefix}${tool}`) {
       message.channel.send("Check.");
+    } else if (message.content === `${prefix}shit`) {
+      message.channel.send("Piss!");
     }
   });
 });
