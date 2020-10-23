@@ -50,10 +50,14 @@ bot.once("ready", () => {
 bot.on("message", (message) => {
   if (message.content === `${prefix}shit`) {
     message.channel.send("Piss!");
+  } else if (message.content === `${prefix}unshitmypants`) {
+    message.channel.send(
+      "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
+    );
   } else {
     tools.forEach((tool) => {
       if (message.content === `${prefix}${tool}`) {
-        message.channel.send("Check.");
+        message.channel.send("Check. :mermaid:");
       }
     });
   }
