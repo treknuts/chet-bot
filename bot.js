@@ -42,10 +42,6 @@ bot.once("ready", () => {
   logger.info("Connected");
   logger.info("Logged in as: ");
   logger.info(bot.username + " - (" + bot.id + ")");
-  setInterval(() => {
-    var general = bot.channels.get("768883994493976577");
-    general.send("What's up bois??");
-  }, MIN_INTERVAL);
 });
 bot.on("message", (message) => {
   if (message.content === `${prefix}shit`) {
