@@ -3,7 +3,6 @@ var logger = require("winston");
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = "/";
-const MIN_INTERVAL = 28 * 60 * 1000;
 
 const tools = [
   "knives",
