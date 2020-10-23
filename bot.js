@@ -48,11 +48,13 @@ bot.once("ready", () => {
   }, MIN_INTERVAL);
 });
 bot.on("message", (message) => {
+  if (message.content === `${prefix}shit`) {
+    message.channel.send("Piss!");
+  }
+
   tools.forEach((tool) => {
     if (message.content === `${prefix}${tool}`) {
       message.channel.send("Check.");
-    } else if (message.content === `${prefix}shit`) {
-      message.channel.send("Piss!");
     }
   });
 });
