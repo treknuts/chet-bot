@@ -50,13 +50,13 @@ bot.once("ready", () => {
 bot.on("message", (message) => {
   if (message.content === `${prefix}shit`) {
     message.channel.send("Piss!");
+  } else {
+    tools.forEach((tool) => {
+      if (message.content === `${prefix}${tool}`) {
+        message.channel.send("Check.");
+      }
+    });
   }
-
-  tools.forEach((tool) => {
-    if (message.content === `${prefix}${tool}`) {
-      message.channel.send("Check.");
-    }
-  });
 });
 
 bot.login(process.env.BOT_TOKEN);
