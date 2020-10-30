@@ -55,10 +55,14 @@ bot.on("message", (message) => {
       "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
     );
   } else if (command === "roast") {
-    let mention = message.mentions.users.first();
-    message.channel.send(
-      `Hey ${mention.username}, remember your first blowjob?`
-    );
+    if (!message.mentions.users.size) {
+      return message.reply("You need to tag someone to roast them, retard.");
+    } else {
+      let mention = message.mentions.users.first();
+      message.channel.send(
+        `Hey @${mention.userId}, remember your first blowjob?`
+      );
+    }
   } else {
     tools.forEach((tool) => {
       if (message.content === `${prefix}${tool}`) {
