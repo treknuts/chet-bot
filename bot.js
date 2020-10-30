@@ -61,6 +61,9 @@ bot.on("message", (message) => {
       let mention = message.mentions.users.first().id;
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
     }
+  } else if (command == "finish") {
+    let mention = message.mentions.users.first().id;
+    message.channel.send(`<@${mention} How'd it taste?`);
   } else {
     tools.forEach((tool) => {
       if (message.content === `${prefix}${tool}`) {
