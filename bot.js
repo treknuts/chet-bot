@@ -43,15 +43,17 @@ bot.once("ready", () => {
   logger.info(bot.username + " - (" + bot.id + ")");
 });
 bot.on("message", (message) => {
-  if (message.content === `${prefix}shit`) {
+  const args = message.content.splice(prefix.length).trim().split(/ +/);
+  const command = args[0];
+  if (command === `shit`) {
     message.channel.send("Piss!");
-  } else if (message.content === `${prefix}@thegoddamnbar`) {
+  } else if (command === `@thegoddamnbar`) {
     message.channel.send("I'm at the bar motherfucker");
-  } else if (message.content === `${prefix}unshitmypants`) {
+  } else if (command === `unshitmypants`) {
     message.channel.send(
       "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
     );
-  } else if (message.content === `${prefix}roast `) {
+  } else if (command === `roast`) {
     let mention = message.mentions.users.first();
     message.channel.send(
       `Hey ${mention.username}, remember your first blowjob?`
