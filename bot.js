@@ -51,7 +51,7 @@ bot.on("message", (message) => {
     message.channel.send(
       "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
     );
-  } else if (message.content === `${prefix}roast`) {
+  } else if (message.content === `${prefix}roast `) {
     let mention = message.mentions.users.first();
     message.channel.send(
       `Hey ${mention.username}, remember your first blowjob?`
