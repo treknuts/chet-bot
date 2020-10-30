@@ -51,6 +51,8 @@ bot.on("message", (message) => {
     message.channel.send(
       "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
     );
+  } else if (message.content === `${prefix}roastelliot`) {
+    message.channel.send("Hey Elliot, remember your first blowjob?");
   } else {
     tools.forEach((tool) => {
       if (message.content === `${prefix}${tool}`) {
