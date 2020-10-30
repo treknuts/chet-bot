@@ -43,7 +43,7 @@ bot.once("ready", () => {
   logger.info(bot.username + " - (" + bot.id + ")");
 });
 bot.on("message", (message) => {
-  const args = message.content.splice(prefix.length).trim().split(/ +/);
+  const args = message.content.slice(prefix.length).trim().split(/ +/);
   console.log(args);
   const command = args[0];
   if (command === "shit") {
