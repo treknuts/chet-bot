@@ -59,7 +59,7 @@ bot.on("message", (message) => {
       return message.reply("You need to tag someone to roast them, retard.");
     } else {
       let mention = message.mentions.users.first().id;
-      message.channel.send(`Hey @${mention}, remember your first blowjob?`);
+      message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
     }
   } else {
     tools.forEach((tool) => {
