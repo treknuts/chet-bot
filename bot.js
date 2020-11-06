@@ -47,7 +47,7 @@ bot.on("message", (message) => {
   console.log(args);
   const command = args[0];
   if (command === "@thegoddamnbar") {
-    message.channel.send(`<@${229462482337529856}> is at the bar. :beer:`);
+    message.channel.send(`<@${"229462482337529856"}> is at the bar. :beer:`);
   } else if (command === "unpoopmypants") {
     message.channel.send(
       "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
@@ -59,7 +59,6 @@ bot.on("message", (message) => {
       return message.reply("lil dick mf :pinching_hand:");
     } else {
       let mention = message.mentions.users.first().id;
-      logger.info(mention);
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
     }
   } else if (command == "finish") {
