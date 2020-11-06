@@ -46,17 +46,15 @@ bot.on("message", (message) => {
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   console.log(args);
   const command = args[0];
-  if (command === "shit") {
-    message.channel.send("Piss!");
-  } else if (command === "@thegoddamnbar") {
-    message.channel.send("I'm at the bar motherfucker");
-  } else if (command === "unshitmypants") {
+  if (command === "@thegoddamnbar") {
+    message.channel.send(`<@${229462482337529856}> is at the bar. :beer:`);
+  } else if (command === "unpoopmypants") {
     message.channel.send(
       "Here buddy let me clean that up for ya. :roll_of_paper: :toilet: Now go take a :bath:"
     );
   } else if (command === "roast") {
     if (!message.mentions.users.size) {
-      return message.reply("You need to tag someone to roast them, retard.");
+      return message.reply("You need to tag someone to roast them, silly.");
     } else if (message.mentions.users.first().id == 233363034129563650) {
       return message.reply("lil dick mf :pinching_hand:");
     } else {
@@ -65,7 +63,7 @@ bot.on("message", (message) => {
     }
   } else if (command == "finish") {
     if (!message.mentions.users.size) {
-      return message.reply("You dumb, stupid, or dumb?");
+      return message.reply("There's no one to finish. :person_shrugging:");
     } else if (message.mentions.users.first().id == 233363034129563650) {
       return message.reply("Please stop. :(");
     } else {
