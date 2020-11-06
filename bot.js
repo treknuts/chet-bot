@@ -54,16 +54,18 @@ bot.on("message", (message) => {
     );
   } else if (command === "roast") {
     if (!message.mentions.users.size) {
-      return message.reply("You need to tag someone to roast them, silly.");
+      return message.reply("you need to tag someone to roast them, silly.");
     } else if (message.mentions.users.first().id == 233363034129563650) {
-      return message.reply(`Hold up. <@${"233363034129563650"}> is my boy.`);
+      return message.reply(`hold up. <@${"233363034129563650"}> is my boy.`);
     } else {
       let mention = message.mentions.users.first().id;
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
     }
   } else if (command == "finish") {
     if (!message.mentions.users.size) {
-      return message.reply("There's no one to finish. :person_shrugging:");
+      return message.reply(
+        "you need to tell me who to finish. :person_shrugging:"
+      );
     } else if (message.mentions.users.first().id == 233363034129563650) {
       return message.reply("Please stop. :(");
     } else {
