@@ -59,6 +59,7 @@ bot.on("message", (message) => {
       return message.reply("lil dick mf :pinching_hand:");
     } else {
       let mention = message.mentions.users.first().id;
+      logger.info(mention);
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
     }
   } else if (command == "finish") {
