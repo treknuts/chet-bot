@@ -57,6 +57,8 @@ bot.on("message", (message) => {
   } else if (command === "roast") {
     if (!message.mentions.users.size) {
       return message.reply("You need to tag someone to roast them, retard.");
+    } else if (message.mentions.users.first().id == 233363034129563650) {
+      return message.reply("Nice try. :pinch_hand:");
     } else {
       let mention = message.mentions.users.first().id;
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
