@@ -56,7 +56,7 @@ bot.on("message", (message) => {
     if (!message.mentions.users.size) {
       return message.reply("You need to tag someone to roast them, silly.");
     } else if (message.mentions.users.first().id == 233363034129563650) {
-      return message.reply(`Hold up. <@${"233363034129563650"} is my boy.`);
+      return message.reply(`Hold up. <@${"233363034129563650"}> is my boy.`);
     } else {
       let mention = message.mentions.users.first().id;
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
