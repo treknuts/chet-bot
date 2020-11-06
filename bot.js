@@ -64,8 +64,14 @@ bot.on("message", (message) => {
       message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
     }
   } else if (command == "finish") {
-    let mention = message.mentions.users.first().id;
-    message.channel.send(`<@${mention}> How'd it taste?`);
+    if (!message.mentions.users.size) {
+      return message.reply("You dumb, stupid, or dumb?");
+    } else if (message.mentions.users.first().id == 233363034129563650) {
+      return message.reply("Please stop. :(");
+    } else {
+      let mention = message.mentions.users.first().id;
+      message.channel.send(`<@${mention}> How'd it taste?`);
+    }
   } else {
     tools.forEach((tool) => {
       if (message.content === `${prefix}${tool}`) {
