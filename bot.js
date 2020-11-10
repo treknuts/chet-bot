@@ -47,7 +47,7 @@ bot.on("message", (message) => {
   console.log(args);
   const command = args[0];
   if (command === "game") {
-    message.channel.send(`<@${"775171418459602944"}> lets play some games!`);
+    message.channel.send(`<@&${"775171418459602944"}> lets play some games!`);
   } else if (command === "@thegoddamnbar") {
     message.channel.send(`<@${"229462482337529856"}> is at the bar. :beer:`);
   } else if (command === "unpoopmypants") {
