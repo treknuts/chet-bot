@@ -46,7 +46,7 @@ bot.on("message", (message) => {
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   console.log(args);
   const command = args[0];
-  if (message.member.nickname === "233363034129563650") {
+  if (message.member.id === "233363034129563650") {
     message.reply(" ur dumb.");
   } else if (command === "game") {
     roleId = "737855263389909073";
