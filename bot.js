@@ -62,7 +62,7 @@ bot.on("message", (message) => {
       return message.reply(`hold up. <@${"233363034129563650"}> is my boy.`);
     } else {
       let mention = message.mentions.users.first().id;
-      message.channel.send(`Hey <@${mention}>, remember your first blowjob?`);
+      message.channel.send(`Hey <@${mention}>, is your refrigerator running?`);
     }
   } else if (command == "finish") {
     if (!message.mentions.users.size) {
@@ -73,7 +73,7 @@ bot.on("message", (message) => {
       return message.reply("Please stop. :(");
     } else {
       let mention = message.mentions.users.first().id;
-      message.channel.send(`<@${mention}> How'd it taste?`);
+      message.channel.send(`<@${mention}> then you better go catch it!`);
     }
   } else {
     tools.forEach((tool) => {
